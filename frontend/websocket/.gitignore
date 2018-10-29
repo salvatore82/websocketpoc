@@ -4,11 +4,10 @@
 /dist
 /tmp
 /out-tsc
+/e2e
 
 # dependencies
 /node_modules
-
-/e2e
 
 # IDEs and editors
 /.idea
@@ -25,6 +24,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.editorconfig
 
 # misc
 /.sass-cache
