@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Message } from '@stomp/stompjs';
 import { AppService } from './app.service';
 import { Subscription } from 'rxjs';
+import { initChangeDetectorIfExisting } from '@angular/core/src/render3/instructions';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'websocketpoc';
+  output = 'init ';
 
   private datasubscription: Subscription;
   private statesubscription: Subscription;
@@ -25,6 +27,7 @@ export class AppComponent {
 
   private onData = (message: Message) => {
     console.log(message.body);
+    this.output = this.output.concat(message.body.concat(' '));
     //this.uiData = JSON.parse(message.body);
   }
 
