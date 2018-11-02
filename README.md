@@ -6,7 +6,7 @@ Backend has been done in Java, with Spring Boot , and frontend in Angular 6.
 
 ## How to run
 
-Please refer to relative README.MD in frontend and backend folder.
+Please refer to relative README.MD in frontend and backend folder:
 
 \backend\websocket\README.MD
 
